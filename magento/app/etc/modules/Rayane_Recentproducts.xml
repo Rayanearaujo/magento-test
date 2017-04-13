@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Rayane_Recentproducts>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rayane_Recentproducts>
+    </modules>
+</config>

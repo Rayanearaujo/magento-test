@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Rayane_Recentproducts>
+            <version>0.0.1</version>
+        </Rayane_Recentproducts>
+    </modules>
+    <frontend>
+        <routers>
+            <recentproducts>
+                <use>standard</use>
+                <args>
+                    <module>Rayane_Recentproducts</module>
+                    <frontName>recentproducts</frontName>
+                </args>
+            </recentproducts>
+        </routers>
+        <!--<layout>-->
+            <!--<updates>-->
+                <!--<rayane_recentproducts>-->
+                    <!--<block type="recentproducts/recentproducts" name="recentproducts_recentproducts" template="recentproducts/recentproducts.phtml"></block>-->
+                    <!--&lt;!&ndash;<file>rayane_recentproducts.xml</file>&ndash;&gt;-->
+                <!--</rayane_recentproducts>-->
+            <!--</updates>-->
+        <!--</layout>-->
+    </frontend>
+    <admin>
+        <routers>
+            <recentproducts>
+                <use>admin</use>
+                <args>
+                    <module>Rayane_Recentproducts</module>
+                    <frontName>admin_recentproducts</frontName>
+                </args>
+            </recentproducts>
+        </routers>
+    </admin>
+    <global>
+        <helpers>
+            <recentproducts>
+                <class>Rayane_Recentproducts_Helper</class>
+            </recentproducts>
+        </helpers>
+        <blocks>
+            <recentproducts>
+                <class>Rayane_Recentproducts_Block</class>
+            </recentproducts>
+        </blocks>
+        <models>
+            <recentproducts>
+                <class>Rayane_Recentproducts_Model</class>
+            </recentproducts>
+        </models>
+    </global>
+    <adminhtml>
+        <menu>
+            <recentproducts module="recentproducts">
+                <title>Recent Products</title>
+                <sort_order>100</sort_order>
+                <children>
+                    <recentproducts module="recentproducts">
+                        <title>Recent Products</title>
+                        <sort_order>0</sort_order>
+                        <action>admin_recentproducts/adminhtml_index</action>
+                    </recentproducts>
+                </children>
+            </recentproducts>
+        </menu>
+    </adminhtml>
+</config>
